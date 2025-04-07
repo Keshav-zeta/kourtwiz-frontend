@@ -1,5 +1,5 @@
 import ClubCourtPage from '../pages/club-courts/ClubCourtPage';
-import CreateClubMembershipsPage from '../pages/club-memberships-create/CreateClubMembershipspage';
+import CreateClubMembershipsPage from '../pages/club-memberships-create/CreateClubMembershipsPage';
 import ClubMembersPage from '../pages/clubMembersPage/ClubMembersPage';
 import ClubsListPage from '../pages/clubsListPage/ClubsListPage';
 const ClubsListRoutes = [
