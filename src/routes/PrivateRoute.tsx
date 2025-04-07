@@ -1,14 +1,15 @@
+import { JSX } from "react";
 import { UserInfoProvider } from "../context/UserInfoContext";
-import KeycloakProvider from "../features/keycloak/KeycloakProvider";
+import ManualLoginProvider from "../features/login/ManualLoginProvider";
 
 import Sidebar from "../features/sidebar/Sidebar";
 
 function PrivateRoute(): JSX.Element {
   return (
     <UserInfoProvider>
-      <KeycloakProvider>
+      <ManualLoginProvider>
         <Sidebar />
-      </KeycloakProvider>
+        </ManualLoginProvider>
     </UserInfoProvider>
   );
 }

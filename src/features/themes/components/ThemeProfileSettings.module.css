@@ -1,0 +1,14 @@
+.themeCard {
+  width: 180px;
+  height: 180px;
+  margin: auto;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.themeCard:hover {
+  transform: scale(1.03);
+}

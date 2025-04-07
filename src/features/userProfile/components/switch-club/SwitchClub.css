@@ -1,0 +1,30 @@
+.switch-club-list {
+  padding: 0;
+}
+
+.switch-club-item {
+  border-radius: var(--border-radius-sm);
+  transition: background-color 0.2s ease;
+}
+
+.switch-club-item:hover {
+  background-color: var(--main-surface-hover-color);
+}
+
+.club-item-line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--main-text-color);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.club-name {
+  color: var(--main-text-color);
+}
+
+.club-role {
+  color: var(--secondary-text-color);
+}

@@ -1,0 +1,58 @@
+.signup-container {
+    background: linear-gradient(rgba(34, 193, 195, 0.8), rgba(253, 187, 45, 0.8)),
+                url("https://images.pexels.com/photos/1103829/pexels-photo-1103829.jpeg") no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .signup-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+    
+  
+    & button{
+      width: 100%;
+      padding: 10px;
+      background-color: #ff9800;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+  
+  h2 {
+    color: #333;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #e68900;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 14px;
+  }
+  
+  .loading-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  

@@ -1,0 +1,48 @@
+.header {
+  position: fixed; 
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: black;
+  padding: 5px;
+  z-index: 5;
+  height: 4rem;
+}
+
+.logo img {
+  height: 25px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover{
+  text-decoration: underline;
+}
+
+.contact-btn {
+  border: 2px solid white;
+  padding: 8px 16px;
+  background: transparent;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.contact-btn:hover {
+  background: white;
+  color: black;
+}

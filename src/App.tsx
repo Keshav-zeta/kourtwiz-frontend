@@ -1,12 +1,13 @@
-import React from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import createRoutes from "./routes/index";
-import ErrorBoundary from "./ErrorBoundary";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import "./App.css";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-
+import React from 'react';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import createRoutes from './routes/index';
+import ErrorBoundary from './ErrorBoundary';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { AuthProvider } from './context/AuthContext';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import './App.css';
+import { ThemeContextProvider } from './context/ThemeContext';
 
 const App: React.FC = () => {
   const routes = createRoutes();
@@ -16,7 +17,7 @@ const App: React.FC = () => {
   return (
     <ErrorBoundary>
       <ToastContainer
-        position="top-right"
+        position='top-right'
         autoClose={2000}
         hideProgressBar={false}
         newestOnTop
@@ -25,10 +26,14 @@ const App: React.FC = () => {
         pauseOnFocusLoss={false}
         draggable
         pauseOnHover={false}
-        theme="light"
+        theme='light'
       />
       <QueryClientProvider client={queryClient}>
-        <RouterProvider router={router} />
+        <AuthProvider>
+          <ThemeContextProvider>
+            <RouterProvider router={router} />
+          </ThemeContextProvider>
+        </AuthProvider>
       </QueryClientProvider>
     </ErrorBoundary>
   );

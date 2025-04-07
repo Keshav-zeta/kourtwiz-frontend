@@ -420,3 +420,7 @@
   height: 1.5rem;
   color: rgba(0, 0, 0, 0.54);
 }
+
+.list-item-icon{
+  height: 2rem;
+}

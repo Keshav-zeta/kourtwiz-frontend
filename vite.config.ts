@@ -26,6 +26,14 @@ export default defineConfig(({ mode }) => {
         "@/": new URL("./src/", import.meta.url).pathname,
       },
     },
+    optimizeDeps: {
+      include: [
+        "@fullcalendar/core",
+        "@fullcalendar/react",
+        "@fullcalendar/resource-timegrid",
+        "@fullcalendar/resource-daygrid",
+      ],
+    },
     envDir: "src/environments/",
     server: {
       host: true,

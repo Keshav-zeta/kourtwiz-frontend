@@ -1,0 +1,48 @@
+.clubsListPage{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem;
+
+    & h2{
+        margin-bottom: 1rem;
+        padding-left: 1rem;
+    }
+
+    .table-container{
+        background-color: rgb(255, 255, 255);
+        margin: 1rem;
+        box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 0.5rem;
+        width: 100%;
+
+        & table{
+            width: 100%;
+            table-layout: fixed; 
+            th, td {
+                padding: 12px;
+                text-align: left;
+                word-wrap: break-word;
+            }
+
+            td:last-child {
+                text-align: right;
+            }
+
+            th, td:first-child {
+                padding-left: 1.5rem;
+            }
+
+            & button{
+                background-color: #578bf3;
+                color: white;
+            }
+
+            & button:hover{
+                background-color: black;
+                color: white;
+            }
+
+        }
+    }
+}

@@ -1,52 +1,34 @@
-import "./Header.css";
-import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import logo from "@/assets/logo.png";
+import "./Header.css";
 
 const Header = () => {
-  const [navigation, setNavigation] = useState(false);
   const navigate = useNavigate();
-  const navRef = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    const navToggle = () => {
-      if (window.innerWidth < 900) {
-        setNavigation(false);
-      }
-    };
-    window.addEventListener("resize", navToggle);
-    return () => {
-      window.removeEventListener("resize", navToggle);
-    };
-  }, []);
-
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (navRef.current && !navRef.current.contains(event.target as Node)) {
-        setNavigation(false);
-      }
-    };
-
-    if (navigation) {
-      document.addEventListener("mousedown", handleClickOutside);
-    } else {
-      document.removeEventListener("mousedown", handleClickOutside);
+  const handleNavigation = (e, targetId) => {
+    e.preventDefault();
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth" });
     }
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [navigation]);
+  };
 
   return (
-    <div className="header">
-      <button
-        className="header-btn"
-        type="button"
-        onClick={() => navigate("/home")}
-      >
-        Login
-      </button>
-    </div>
+    <header className="header">
+      <div className="logo">
+        <img src={logo} alt="Pickleball Logo"  style={{ width: "50px", height: "auto" }}/>
+      </div>
+      <nav className="nav-links">
+      <a href="#home" onClick={(e) => handleNavigation(e, "home")}>HOME</a>
+        <a href="#about" onClick={(e) => handleNavigation(e, "about")}>ABOUT</a>
+        <a href="#clubs" onClick={(e) => handleNavigation(e, "clubs")}>CLUBS</a>
+        <a href="#pricing" onClick={(e) => handleNavigation(e, "pricing")}>PRICING</a>
+        <a href="#services" onClick={(e) => handleNavigation(e, "services")}>SERVICES</a>
+        
+        <button className="contact-btn" onClick={() => navigate("")}>
+          CONTACT
+        </button>
+      </nav>
+    </header>
   );
 };
 

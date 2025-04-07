@@ -1,0 +1,65 @@
+.member-registration-wrapper {
+  width: 800px;
+  margin: 80px auto;
+}
+
+.member-registration-heading {
+  color: #555555;
+  font-weight: 800;
+  margin-bottom: 10rem;
+}
+
+.autocomplete-paper {
+  margin-top: 8px;
+  border-radius: 16px;
+  /* Removed max-height and overflow-y */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 8px;
+}
+
+.MuiAutocomplete-listbox {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.club-option-paper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.club-option-paper:hover {
+  background-color: #f5f5f5;
+}
+
+.club-option-content {
+  display: flex;
+  align-items: center;
+}
+
+.club-avatar {
+  margin-right: 12px;
+  width: 40px;
+  height: 40px;
+}
+
+.club-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.club-name {
+  font-weight: 500;
+}
+
+.club-address {
+  color: #666;
+}
+
+.create-account-button {
+  margin-left: 12px;
+}
