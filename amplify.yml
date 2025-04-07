@@ -7,7 +7,7 @@ frontend:
     build:
       commands:
         - npx tsc -p tsconfig.prod.json || echo "TypeScript errors ignored for deploy"
-        - vite build
+        - npx vite build
   artifacts:
     baseDirectory: dist
     files:
